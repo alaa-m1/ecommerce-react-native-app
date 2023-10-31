@@ -16,7 +16,7 @@ import {
   Header,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { Button } from '~/shared';
+import { EButton } from '~/shared';
 
 const Home = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -40,8 +40,8 @@ console.log('SignUp')
         style={styles.mainImage}
         source={require('../../assets/images/ecommerce-logo.png')}></Image>
         <Text style={styles.mainTitle}>E-commerce </Text><Text style={styles.subTitle}>is a joy with us</Text>
-        <Button variant='contained' label="Sign In" onPress={handleOnSignIn}/>
-        <Button label="Sign Up" onPress={handleOnSignUp}/>
+        <EButton variant='contained' label="Sign In" onPress={handleOnSignIn}/>
+        <EButton label="Sign Up" onPress={handleOnSignUp}/>
     </View>
   );
 };

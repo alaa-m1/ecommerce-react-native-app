@@ -7,12 +7,12 @@ import {
 } from 'react-native';
 import { palette } from '../style/palettes';
 
-type ButtonProps = {
+type EButtonProps = {
   label: string;
   variant?: 'text' | 'outlined' | 'contained';
   onPress: (event: GestureResponderEvent) => void;
 };
-export const Button = ({label, variant = 'text', onPress}: ButtonProps) => {
+export const EButton = ({label, variant = 'text', onPress}: EButtonProps) => {
   return (
     <TouchableOpacity
       onPress={onPress}
