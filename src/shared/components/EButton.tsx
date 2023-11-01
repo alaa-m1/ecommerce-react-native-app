@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
     width: '100%',
-    marginVertical: 5,
+    marginVertical: 10,
   },
   text: {},
   outlined: {},

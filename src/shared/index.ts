@@ -1,2 +1,2 @@
 export * from "./components";
-export * from "./style/palettes";
+export * from "./style";

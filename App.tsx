@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from './src/screens/Home';
+import HomePage from './src/screens/Home/HomePage';
 import {StatusBar, useColorScheme, SafeAreaView} from 'react-native';
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
-import Auth from '~/screens/Auth';
+import AuthPage from '~/screens/Auth/AuthPage';
 const App = (): JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
   const backgroundStyle = {
@@ -14,7 +14,7 @@ const App = (): JSX.Element => {
           barStyle={isDarkMode ? 'light-content' : 'dark-content'}
           backgroundColor={backgroundStyle.backgroundColor}
         />
-        <Home />
+        <AuthPage />
       </SafeAreaView>
   );
 };
