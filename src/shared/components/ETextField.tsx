@@ -1,5 +1,5 @@
 import {Pressable, StyleSheet, TextInput, View, Text} from 'react-native';
-import {Eye, EyeOff} from 'lucide-react-native';
+import {Icon} from 'react-native-paper';
 import {useState} from 'react';
 import {palette, textFieldFontSize} from '../style';
 type ETextFieldProps = {
@@ -27,9 +27,9 @@ export const ETextField = ({
             style={styles.icon}
             onPress={() => setHidePassword(h => !h)}>
             {hidePassword ? (
-              <Eye color="#000" />
+              <Icon source="eye" size={25} color={palette.primary.main} />
             ) : (
-              <EyeOff color="#000"/>
+              <Icon source="eye-off" size={25} color={palette.primary.main} />
             )}
           </Pressable>
         )}
@@ -39,9 +39,9 @@ export const ETextField = ({
 };
 
 const styles = StyleSheet.create({
-  container: {marginVertical: 5, flexDirection:"column"},
-  label:{
-    fontSize:20,
+  container: {marginVertical: 5, flexDirection: 'column'},
+  label: {
+    fontSize: 20,
     color: palette.primary.dark,
   },
   inputContainer: {
@@ -59,6 +59,6 @@ const styles = StyleSheet.create({
     color: palette.primary.dark,
   },
   icon: {
-    paddingHorizontal:20
+    paddingHorizontal: 20,
   },
 });

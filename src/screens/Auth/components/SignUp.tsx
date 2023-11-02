@@ -11,32 +11,47 @@ import {Checkbox} from 'react-native-paper';
 import {useGoogleSignin} from '../hooks';
 import _ from 'lodash';
 
-type SignInProps = {
+type SignUpProps = {
   style: StyleProp<ViewStyle>;
 };
-export const SignIn = (props: SignInProps) => {
+export const SignUp = (props: SignUpProps) => {
+  const [checked, setChecked] = useState<
+    'checked' | 'unchecked' | 'indeterminate'
+  >('checked');
+
   const {googleSignIn, error, useInfo} = useGoogleSignin();
-  
+
   const {showAlert} = useAlert({
     title: 'title 11',
     msg: useInfo?.user.name || '',
     onDismiss: () => console.log('onDismiss'),
     cancelBtn: {},
   });
-
   useEffect(() => {
     if (!_.isEmpty(useInfo?.user.name)) showAlert();
   }, [useInfo?.user.name]);
 
-  const handleOnSignIn = (event: GestureResponderEvent) => {
-    console.log('SignIn');
+  const handleOnSignUp = (event: GestureResponderEvent) => {
+    console.log('SignUp');
   };
-
+  
   return (
     <View {...props}>
+      <ETextField label="Name:" placeholder="User name" />
       <ETextField label="Email:" placeholder="example@provider.com" />
       <ETextField label="Password:" placeholder="*********" isPassword />
-      <EButton variant="contained" label="Sign In" onPress={handleOnSignIn} />
+      <Checkbox.Item
+        label="Accept terms & conditions"
+        status={checked}
+        position="leading"
+        labelVariant="headlineSmall"
+        onPress={() => {
+          if (checked === 'checked') {
+            setChecked('unchecked');
+          } else setChecked('checked');
+        }}
+      />
+      <EButton variant="contained" label="Sign Up" onPress={handleOnSignUp} />
       <ESeparate label="Or continue with" />
       <EButton
         variant="outlined"
