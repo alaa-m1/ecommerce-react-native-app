@@ -10,7 +10,11 @@ type useAlertProps = {
 export const useAlert = ({
   title,
   msg,
-  cancelBtn: {cancelable = true, text = 'Cancel', onPress=()=>console.log('on cancel press')},
+  cancelBtn: {
+    cancelable = true,
+    text = 'Cancel',
+    onPress = () => console.log('on cancel press'),
+  },
   onDismiss,
 }: useAlertProps) => {
   const cancelBtnObject = useMemo<AlertButton>(

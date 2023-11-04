@@ -7,12 +7,12 @@ import {
 } from 'react-native';
 import {Icon} from 'react-native-paper';
 import {palette, titleFontSize} from '~/shared';
-type HeaderProps = {
+type AuthHeaderProps = {
   title: string;
   onNavBackPress: (event: GestureResponderEvent) => void;
 };
 
-export const Header = ({title, onNavBackPress}: HeaderProps) => {
+export const AuthHeader = ({title, onNavBackPress}: AuthHeaderProps) => {
   return (
     <View style={styles.headerContainer}>
       <Pressable onPress={onNavBackPress}>
@@ -24,7 +24,6 @@ export const Header = ({title, onNavBackPress}: HeaderProps) => {
 };
 const styles = StyleSheet.create({
   headerContainer: {
-    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
