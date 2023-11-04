@@ -24,7 +24,6 @@ export const useGoogleSignin = () => {
         try {
             await GoogleSignin.hasPlayServices();
             const user = await GoogleSignin.signIn();
-            console.log('userInfo=', user);
             setUserInfo(user)
         } catch (error: any) {
             if (error.code === statusCodes.SIGN_IN_CANCELLED) {

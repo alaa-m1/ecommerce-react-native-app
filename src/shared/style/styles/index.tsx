@@ -2,8 +2,8 @@ import {ViewStyle} from 'react-native';
 
 export const sharedStyles: Record<string, ViewStyle> = {
   page: {
+    height: '100%',
     flexGrow: 1,
-    justifyContent: 'flex-start',
     paddingHorizontal: 5,
     paddingVertical: 5,
     backgroundColor: '#fff',

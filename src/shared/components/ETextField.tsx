@@ -12,7 +12,7 @@ export const ETextField = ({
   placeholder,
   isPassword = false,
 }: ETextFieldProps) => {
-  const [hidePassword, setHidePassword] = useState(false);
+  const [hidePassword, setHidePassword] = useState(true);
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>

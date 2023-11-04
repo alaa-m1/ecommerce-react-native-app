@@ -8,7 +8,7 @@ export const ESeparate = ({label}: ESeparateProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.line} />
-      <Text>{label}</Text>
+      <Text style={styles.label}>{label}</Text>
       <View style={styles.line} />
     </View>
   );
@@ -26,5 +26,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 20,
     marginHorizontal: 2,
+  },
+  label: {
+    fontSize: 20,
+    paddingHorizontal: 5,
   },
 });
