@@ -44,7 +44,7 @@ export const CategoriesFlatList = ({items}: CategoriesFlatListProps) => {
 const styles = StyleSheet.create({
   list: {
     padding: 20,
-    height: 90,
+    height: 93,
   },
   item: {
     padding: 5,

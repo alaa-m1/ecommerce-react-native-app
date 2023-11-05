@@ -4,7 +4,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {EHeader} from '~/shared';
 import {useCategories} from './hooks';
 import {CategoriesFlatList, CategoryCard} from './components';
-import {ScrollView} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 
 type ShoppingScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -20,7 +20,7 @@ const ShoppingScreen = ({navigation}: ShoppingScreenProps): JSX.Element => {
     useCategories();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <EHeader
         title="Shopping"
         iconProps={{
@@ -40,4 +40,5 @@ const ShoppingScreen = ({navigation}: ShoppingScreenProps): JSX.Element => {
   );
 };
 
+const styles = StyleSheet.create({container: {marginBottom: 140}});
 export default ShoppingScreen;

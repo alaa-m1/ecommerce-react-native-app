@@ -1,4 +1,4 @@
-type EHeaderIconSource = 'chevron-left' | 'shopping-search';
+type EHeaderIconSource = 'chevron-left' | 'shopping-search' | 'basket-check-outline';
 
 type CategoriesResponse = Array<CategoryResponse>;
 type CategoryResponse = {
