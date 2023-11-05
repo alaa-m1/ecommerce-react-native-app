@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     alignSelf: 'center',
     width: '100%',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   text: {},
   outlined: {

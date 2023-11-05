@@ -15,7 +15,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 type SplashScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
-  'Home'
+  'Checkout'
 >;
 
 type SplashScreenProps = {

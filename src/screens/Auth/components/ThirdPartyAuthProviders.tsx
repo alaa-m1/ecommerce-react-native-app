@@ -11,7 +11,8 @@ export const ThirdPartyAuthProviders = () => {
     title: 'title 11',
     msg: useInfo?.user.name || '',
     onDismiss: () => console.log('onDismiss'),
-    cancelBtn: {},
+    cancelable: true,
+    Btns: [{}],
   });
 
   useEffect(() => {

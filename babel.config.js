@@ -10,6 +10,8 @@ module.exports = {
           '~/screens': './src/screens',
           '~/styles': './src/styles',
           '~/shared': './src/shared',
+          '~/utils': './src/utils',
+          '~/states': './src/states',
         },
       },
     ],
