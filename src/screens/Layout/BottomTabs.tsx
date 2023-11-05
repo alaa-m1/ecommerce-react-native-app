@@ -1,5 +1,5 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from '../Home/HomeScreen';
+import CheckoutScreen from '../Checkout/CheckoutScreen';
 import {Icon} from 'react-native-paper';
 import ShoppingScreen from '../Shopping/ShoppingScreen';
 import {StyleSheet} from 'react-native';
@@ -19,12 +19,14 @@ export const BottomTabs = () => {
         }}
       />
       <Tab.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Checkout"
+        component={CheckoutScreen}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Checkout',
           tabBarLabelStyle: styles.label,
-          tabBarIcon: ({color, size}) => <Icon source="home" size={30} />,
+          tabBarIcon: ({color, size}) => (
+            <Icon source="basket-check-outline" size={30} />
+          ),
         }}
       />
     </Tab.Navigator>

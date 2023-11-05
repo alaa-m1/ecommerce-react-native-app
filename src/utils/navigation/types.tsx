@@ -1,7 +1,7 @@
 type RootStackParamList = {
   BottomTabs: undefined;
   Splash: undefined;
-  Home: undefined;
+  Checkout: undefined;
   Shopping: undefined;
   Auth: {view: string};
 };

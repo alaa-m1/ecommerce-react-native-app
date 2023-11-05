@@ -4,29 +4,28 @@ import {Alert, AlertButton} from 'react-native';
 type useAlertProps = {
   title: string;
   msg: string;
-  cancelBtn: {cancelable?: boolean; text?: string; onPress?: () => void};
+  cancelable: boolean;
+  Btns: Array<AlertButton>;
   onDismiss: () => void;
 };
 export const useAlert = ({
   title,
   msg,
-  cancelBtn: {
-    cancelable = true,
-    text = 'Cancel',
-    onPress = () => console.log('on cancel press'),
-  },
+  cancelable,
+  Btns,
   onDismiss,
 }: useAlertProps) => {
-  const cancelBtnObject = useMemo<AlertButton>(
-    () => ({
-      text,
-      onPress,
-      style: 'cancel',
-    }),
-    [cancelable],
+  const BtnsObject = useMemo<Array<AlertButton>>(
+    () =>
+      Btns.map(item => ({
+        text: item.text,
+        onPress: item.onPress,
+        style: item.style,
+      })),
+    [Btns],
   );
   const showAlert = () =>
-    Alert.alert(title, msg, [cancelBtnObject], {
+    Alert.alert(title, msg, [...BtnsObject], {
       cancelable,
       onDismiss,
     });
